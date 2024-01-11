@@ -1,6 +1,7 @@
 
 import AbstractClases.BasicDrink;
 import Charecters.*;
+import EnumS.DirectionEn;
 import EnumS.PartsOfTigerEn;
 import EnumS.ThingsEn;
 import Exceptions.Checked.EmptySpoonException;
@@ -29,6 +30,8 @@ public class Main {
         tg.suvat(PartsOfTigerEn.НОС);
         tg.eat(tg.find());
         tg.ask(kg);
+        tg.eat(thingsFromJar.takeSomeone());
+        tg.jump(DirectionEn.ВПЕРЕД);
         kg.stayAround(lr);
         pt.stayAround(lr);
         kr.stayAround(lr);
@@ -40,13 +43,14 @@ public class Main {
         kg.talk();
         lr.eat(ThingsEn.РЫБИЙ_ЖИР);
 
+
         try {
             spoon.eatFromSpoon();
         } catch (EmptySpoonException e) {
             throw new RuntimeException(e);
         }
 
-        tg.eat(thingsFromJar.takeSomeone());
+
         Bunny bunny = new Bunny("Крол");
         bunny.write("Привет!");
 

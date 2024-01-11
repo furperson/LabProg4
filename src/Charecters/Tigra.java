@@ -31,6 +31,9 @@ public class Tigra extends BasicAnimal implements EatAble , SuvatAble, EvalAble,
 
     @Override
     public ThingsEn find() {
+
+
+
         ThingsEn[] thng=ThingsEn.values();
         ThingsEn finded = thng[random.nextInt(thng.length)];
         System.out.println(this.getName()+" нашёл "+finded.toString());
@@ -73,7 +76,13 @@ public class Tigra extends BasicAnimal implements EatAble , SuvatAble, EvalAble,
 
     @Override
     public void jump(DirectionEn den) {
+        class Road {
+            public void move(DirectionEn directionEn){
+                System.out.println(getName()+" Прыгнул по дороге в направлении: " + directionEn.toString() );
+            }
+        };
 
-
+        Road road = new Road();
+        road.move(den);
     }
 }
