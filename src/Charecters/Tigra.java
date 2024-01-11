@@ -2,13 +2,14 @@ package Charecters;
 
 import AbstractClases.BasicAnimal;
 import AbstractClases.BasicFriend;
+import EnumS.DirectionEn;
 import EnumS.PartsOfTigerEn;
 import EnumS.ThingsEn;
 import Interf.*;
 
 import java.util.Random;
 
-public class Tigra extends BasicAnimal implements EatAble , SuvatAble, EvalAble, FindAble, AskAble {
+public class Tigra extends BasicAnimal implements EatAble , SuvatAble, EvalAble, FindAble, AskAble,JumpAble {
     final Random random = new Random();
     public Tigra(String name){
         super(name);
@@ -68,5 +69,11 @@ public class Tigra extends BasicAnimal implements EatAble , SuvatAble, EvalAble,
     @Override
     public boolean equals(Object o) {
         return this.toString()==o.toString();
+    }
+
+    @Override
+    public void jump(DirectionEn den) {
+
+
     }
 }
